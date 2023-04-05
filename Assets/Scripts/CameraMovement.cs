@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
@@ -8,7 +9,7 @@ public class CameraMovement : MonoBehaviour
     public Vector3 offset;
 
     
-    void Update()
+    void update()
     {
         transform.position = target.position + offset;
     }

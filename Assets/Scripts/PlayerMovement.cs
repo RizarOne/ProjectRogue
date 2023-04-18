@@ -35,6 +35,9 @@ public class PlayerMovement : MonoBehaviour
     {
         InputManagment();
 
+        fireDelay = GameManager.FireRate;
+
+        moveSpeed = GameManager.MoveSpeed;
 
         float shootHor = Input.GetAxis("ShootHorizontal");
         float shootVert = Input.GetAxis("ShootVertical");

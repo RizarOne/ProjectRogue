@@ -19,7 +19,9 @@ public class Room : MonoBehaviour
         {
             Debug.Log("You pressed play in the wrong scene!");
             return;
-        }    
+        }
+
+        RoomController.instance.RegisterRoom(this);
     }
 
     void OnDrawGizmos()
@@ -32,4 +34,14 @@ public class Room : MonoBehaviour
     {
         return new Vector3(X * Width, Y * Height);
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Player")
+        {
+            RoomController.instance.OnPlayerEnterRoom(this);
+        }
+    }
+    
+        
+    
 }

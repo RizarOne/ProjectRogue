@@ -178,6 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 228629549}
   - component: {fileID: 228629548}
+  - component: {fileID: 228629550}
   m_Layer: 0
   m_Name: RoomController
   m_TagString: Untagged
@@ -213,6 +214,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &228629550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228629547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a734fcd2e18154dad354640d04e2cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dungeonGenerationData: {fileID: 11400000, guid: 8d95fccc25031694db787704b170eb62, type: 2}
 --- !u!1 &280184775
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +376,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1430,7 +1444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360a7fe91e1f57d43b79a7643fc0bd9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
+  moveSpeed: 10
   lastHorizontalVector: 0
   lastVerticalVector: 0
   moveDir: {x: 0, y: 0}

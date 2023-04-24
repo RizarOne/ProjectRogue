@@ -18,6 +18,11 @@ public class GameManager : MonoBehaviour
 
     private static float bulletSize = 0.5f;
 
+    private bool bootCollected = false;
+    private bool screwCollected = false;
+
+    public List<string> collectedNames = new List<string> ();
+
     public static float Health { get => health; set => health = value; }
 
     public static int MaxHealth { get => maxHealth; set => maxHealth = value; }
@@ -77,6 +82,36 @@ public class GameManager : MonoBehaviour
         bulletSize += size;
     }
 
+    public void UpdateCollectedItems(CollectionController item)
+    {
+        collectedNames.Add(item.item.name);
+
+        foreach(string i in collectedNames)
+        {
+            switch (i)
+            {
+                case "Boot":
+                    bootCollected = true;
+                    break;
+
+                case "Screw":
+                    screwCollected = true;
+                    break ;
+
+            }
+        } 
+
+
+        if(bootCollected && screwCollected)
+            {
+            FireRateChange(0.25f);
+
+            }
+    }
+
+   
+        
+   
     private static void KillPlayer()
     {
 

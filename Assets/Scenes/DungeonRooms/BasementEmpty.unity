@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorType: 2
+  doorCollider: {fileID: 0}
 --- !u!1 &302298095
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +422,58 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &495862174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 495862175}
+  - component: {fileID: 495862176}
+  m_Layer: 0
+  m_Name: Grid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &495862175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495862174}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1371417578}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &495862176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495862174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92b46a72d846e7d46a35987d3f1823ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 1371417579}
+  grid:
+    columns: 0
+    rows: 0
+    verticalOffset: 4.5
+    horizontalOffset: 9
+  gridTile: {fileID: 6685378847100406548, guid: e86b58d79c6064549bc7bc1315842a24, type: 3}
+  availablePoints: []
 --- !u!1 &509313220
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,6 +520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorType: 0
+  doorCollider: {fileID: 0}
 --- !u!1 &545709245
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +892,7 @@ Transform:
   - {fileID: 1479454300}
   - {fileID: 1990949564}
   - {fileID: 36025725}
+  - {fileID: 495862175}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -934,6 +989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorType: 1
+  doorCollider: {fileID: 0}
 --- !u!1 &1910741133
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +1071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorType: 3
+  doorCollider: {fileID: 0}
 --- !u!1 &2005891971
 GameObject:
   m_ObjectHideFlags: 0

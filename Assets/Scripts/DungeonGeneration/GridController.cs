@@ -30,8 +30,8 @@ public class GridController : MonoBehaviour
 
     public void GenerateGrid()
     {
-        grid.verticalOffset += room.GetComponent<Transform>().localPosition.y;
-        grid.horizontalOffset += room.GetComponent<Transform>().localPosition.x;
+        grid.verticalOffset += room.transform.localPosition.y;
+        grid.horizontalOffset += room.transform.localPosition.x;
 
         for(int y = 0; y < grid.rows; y++)
         {

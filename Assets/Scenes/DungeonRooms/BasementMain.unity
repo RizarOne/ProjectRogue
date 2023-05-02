@@ -265,8 +265,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -62}
-  m_SizeDelta: {x: 200, y: 55}
+  m_AnchoredPosition: {x: 123.70416, y: -86.7}
+  m_SizeDelta: {x: 247.4083, y: 82.4831}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &280184777
 MonoBehaviour:
@@ -360,7 +360,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.36391956, g: 0.5471698, b: 0.5188497, a: 0}
+  m_BackGroundColor: {r: 0.46978462, g: 0.5352327, b: 0.6509434, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -551,7 +551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1290476551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,7 +568,7 @@ MonoBehaviour:
   enemyType: 0
   range: 10
   speed: 4
-  attackRange: 5
+  attackRange: 2
   bulletSpeed: 0
   coolDown: 2
   bulletPrefab: {fileID: 0}
@@ -780,8 +780,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1.6896}
-  m_SizeDelta: {x: 170, y: 50}
+  m_AnchoredPosition: {x: 12.7742, y: 12.7272}
+  m_SizeDelta: {x: 244.8915, y: 115.9593}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1374811449
 MonoBehaviour:
@@ -803,7 +803,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: abb1816986f72ea489db72c11782042b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cf0be195ca51dbe4bb3f70365915d8ee, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1262,8 +1262,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1.6896}
-  m_SizeDelta: {x: 170, y: 50}
+  m_AnchoredPosition: {x: 12.7741, y: 12.7273}
+  m_SizeDelta: {x: 244.8915, y: 115.9593}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1651842576
 MonoBehaviour:
@@ -1285,7 +1285,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 58627c80a9a8e8848a8882c3b27cdce2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76240d9b84a2daf4087e1d2562e68e13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1338,8 +1338,8 @@ MonoBehaviour:
   enemyType: 1
   range: 10
   speed: 3
-  attackRange: 5
-  bulletSpeed: 5
+  attackRange: 3
+  bulletSpeed: 3
   coolDown: 2
   bulletPrefab: {fileID: 2566097471539640323, guid: bbc2e35b824c7fe4aa3a8db967c06b54, type: 3}
 --- !u!212 &1765654089
@@ -1573,7 +1573,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -43}
   m_SizeDelta: {x: 450.7272, y: 42.6038}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2130703234
@@ -1609,7 +1609,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Collected Amount: 0'
+  m_Text: 'Items collected: 0'
 --- !u!222 &2130703235
 CanvasRenderer:
   m_ObjectHideFlags: 0

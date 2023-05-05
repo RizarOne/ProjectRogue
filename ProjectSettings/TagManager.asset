@@ -48,3 +48,6 @@ TagManager:
   - name: Behind
     uniqueID: 2992443779
     locked: 0
+  - name: Wall
+    uniqueID: 1400923711
+    locked: 0

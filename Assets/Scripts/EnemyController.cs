@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public enum EnemyState
@@ -48,7 +47,7 @@ public class EnemyController : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");  
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
@@ -56,21 +55,21 @@ public class EnemyController : MonoBehaviour
         switch (currState)
         {
             //case (EnemyState.Idle):
-               // Idle();
-               // break;
+            // Idle();
+            // break;
 
             case (EnemyState.Wander):
                 Wander();
                 break;
 
-                case(EnemyState.Follow):
+            case (EnemyState.Follow):
                 Follow();
                 break;
 
-                case(EnemyState.Die):
+            case (EnemyState.Die):
                 break;
 
-                case (EnemyState.Attack):
+            case (EnemyState.Attack):
                 Attack();
                 break;
         }
@@ -130,13 +129,14 @@ public class EnemyController : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
 
-    void Attack()
+
+   void Attack()
     {
         if (!coolDownAttack)
         {
-            switch(enemyType)
+            switch (enemyType)
             {
-                case(EnemyType.Melee):
+                case (EnemyType.Melee):
                     GameManager.DamagePlayer(1);
                     StartCoroutine(CoolDown());
                     break;

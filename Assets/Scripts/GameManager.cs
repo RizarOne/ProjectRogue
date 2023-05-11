@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -32,8 +33,9 @@ public class GameManager : MonoBehaviour
     public static float FireRate { get => fireRate; set => fireRate = value; }
     public static float BulletSize { get => bulletSize; set => bulletSize = value; }
 
-    public Text healthText; 
+    public Text healthText;
 
+    public static GameObject player;
     
 
 
@@ -50,7 +52,14 @@ public class GameManager : MonoBehaviour
     {
         healthText.text = "Health: " + health;
     }
-    
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+
+
+      }
+
 
     public static void DamagePlayer(int damage)
     {
@@ -58,7 +67,7 @@ public class GameManager : MonoBehaviour
 
         if(Health <= 0)
         {
-            KillPlayer();
+           KillPlayer();
         }
     }
 
@@ -114,6 +123,13 @@ public class GameManager : MonoBehaviour
    
     private static void KillPlayer()
     {
+        Debug.Log("Died");
+        Destroy(player);
 
     }
+
+
+    
+
+
 }

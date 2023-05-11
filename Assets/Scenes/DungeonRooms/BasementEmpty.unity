@@ -1299,6 +1299,8 @@ MonoBehaviour:
     spawnerData: {fileID: 11400000, guid: 8715bf3b28f31bd419834d4b0391ed29, type: 2}
   - name: RandomItemSpawner
     spawnerData: {fileID: 11400000, guid: dddb21d14052575439008ad325625cf3, type: 2}
+  - name: RangedEnemy
+    spawnerData: {fileID: 11400000, guid: 2e69e714f318a0c41af0446a40653c42, type: 2}
 --- !u!1 &1479454299
 GameObject:
   m_ObjectHideFlags: 0

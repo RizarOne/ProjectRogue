@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
+    public Animator animator;
     Rigidbody2D rb;
     [HideInInspector]
     public float lastHorizontalVector;
@@ -35,13 +36,19 @@ public class PlayerMovement : MonoBehaviour
     {
         InputManagment();
 
+        moveDir.x = Input.GetAxisRaw("Horizontal");
+        moveDir.y = Input.GetAxisRaw("Vertical");
+        animator.SetFloat("Horizontal", moveDir.x);
+        animator.SetFloat("Vertical", moveDir.y);
+        animator.SetFloat("Speed", moveDir.sqrMagnitude);
+
         fireDelay = GameManager.FireRate;
 
         moveSpeed = GameManager.MoveSpeed;
 
         float shootHor = Input.GetAxis("ShootHorizontal");
         float shootVert = Input.GetAxis("ShootVertical");
-        if((shootHor != 0 || shootVert != 0) && Time.time > lastFire + fireDelay)
+        if ((shootHor != 0 || shootVert != 0) && Time.time > lastFire + fireDelay)
         {
             Shoot(shootHor, shootVert);
             lastFire = Time.time;
@@ -66,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Move();  
+        Move();
     }
 
     void InputManagment()
@@ -76,19 +83,13 @@ public class PlayerMovement : MonoBehaviour
 
         moveDir = new Vector2(moveX, moveY).normalized;
 
-        if(moveDir.x != 0)
-        {
-            lastHorizontalVector = moveDir.x;
-        }
-
-        if(moveDir.y != 0)
-        {
-            lastHorizontalVector -= moveDir.y;
-        }
+        
     }
 
     void Move()
     {
-        rb.velocity = new Vector2(moveDir.x * moveSpeed, moveDir.y * moveSpeed);
+        //rb.velocity = new Vector2(moveDir.x * moveSpeed, moveDir.y * moveSpeed);
+        Vector2 direction = moveDir.normalized;
+        rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
     }
 }

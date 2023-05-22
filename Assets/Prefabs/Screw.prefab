@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 02800fb9cff14da47a04572790384d8b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9df71c2bf72600d46991e2a5f84f07ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
   item:
     name: Screw
     description: Increase bullet size and speed
-    itemImage: {fileID: 21300000, guid: 4ab15d8cb0bebd845b2ca6e50bf0e26b, type: 3}
+    itemImage: {fileID: 21300000, guid: 9df71c2bf72600d46991e2a5f84f07ca, type: 3}
   healthChange: 0
   moveSpeedChange: 0
   attackSpeedChange: 0.25

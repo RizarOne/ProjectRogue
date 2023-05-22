@@ -577,12 +577,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b46a72d846e7d46a35987d3f1823ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: {fileID: 1371417579}
+  room: {fileID: 0}
   grid:
     columns: 0
     rows: 0
-    verticalOffset: 6
-    horizontalOffset: 11
+    verticalOffset: 2.5
+    horizontalOffset: 8
   gridTile: {fileID: 6685378847100406548, guid: e86b58d79c6064549bc7bc1315842a24, type: 3}
   availablePoints: []
 --- !u!1 &509313220

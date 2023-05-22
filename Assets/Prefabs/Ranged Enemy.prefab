@@ -133,7 +133,7 @@ MonoBehaviour:
   bulletSpeed: 3
   coolDown: 2
   notInRoom: 0
-  bulletPrefab: {fileID: 2566097471539640323, guid: bbc2e35b824c7fe4aa3a8db967c06b54, type: 3}
+  bulletPrefab: {fileID: 2566097471539640323, guid: d08053c307420bd4c9cc83231d9ee665, type: 3}
 --- !u!50 &2225276184664028985
 Rigidbody2D:
   serializedVersion: 4

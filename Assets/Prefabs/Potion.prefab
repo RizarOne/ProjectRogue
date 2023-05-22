@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 02800fb9cff14da47a04572790384d8b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df2d793a1f62d0546af74772d7bec111, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   item:
     name: Potion
     description: +1 to health
-    itemImage: {fileID: 21300000, guid: 86191287fffbec4499fb3c2007a9c753, type: 3}
+    itemImage: {fileID: 21300000, guid: df2d793a1f62d0546af74772d7bec111, type: 3}
   healthChange: 1
   moveSpeedChange: 0
   attackSpeedChange: 0

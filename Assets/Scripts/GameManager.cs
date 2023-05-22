@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     private static int maxHealth = 6;
 
-    private static float moveSpeed = 5f;
+    private static float moveSpeed = 4f;
 
     private static float fireRate = 0.5f;
 
@@ -125,6 +125,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Died");
         Destroy(player);
+        Time.timeScale = 0;
 
     }
 

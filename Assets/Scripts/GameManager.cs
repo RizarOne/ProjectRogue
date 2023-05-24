@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameManager : MonoBehaviour
 {
+    public static event Action OnPlayerDeath;
 
     public static GameManager instance;
 
@@ -67,7 +69,11 @@ public class GameManager : MonoBehaviour
 
         if(Health <= 0)
         {
-           KillPlayer();
+           health = 0;
+            Debug.Log("Died");
+            Destroy(player);
+            //Time.timeScale = 0; Animaatio ei toimi deathscreenissä jos tämän enabloin
+            OnPlayerDeath?.Invoke();
         }
     }
 
@@ -95,7 +101,7 @@ public class GameManager : MonoBehaviour
     {
         collectedNames.Add(item.item.name);
 
-        foreach(string i in collectedNames)
+        foreach (string i in collectedNames)
         {
             switch (i)
             {
@@ -105,32 +111,20 @@ public class GameManager : MonoBehaviour
 
                 case "Screw":
                     screwCollected = true;
-                    break ;
+                    break;
 
             }
-        } 
+        }
 
 
-        if(bootCollected && screwCollected)
-            {
-            FireRateChange(0.25f);
+        if (bootCollected && screwCollected)
+        {
+            FireRateChange(0.1f);
 
-            }
-    }
+        }
 
-   
         
-   
-    private static void KillPlayer()
-    {
-        Debug.Log("Died");
-        Destroy(player);
-        Time.timeScale = 0;
 
     }
-
-
-    
-
 
 }

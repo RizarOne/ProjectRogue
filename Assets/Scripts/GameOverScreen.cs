@@ -31,15 +31,23 @@ public class GameOverScreen : MonoBehaviour
     {
         SceneManager.LoadScene("BasementMain");
         DungeonCrawlerController.positionsVisited.Clear();
+        GameManager.health = 6f;
+        GameManager.fireRate = 0.4f;
+        GameManager.bulletSize = 0.5f;
+        GameManager.moveSpeed = 4f;
+        
         Time.timeScale = 1;
 
-        
     }
 
     public void GoToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
         DungeonCrawlerController.positionsVisited.Clear();
+        GameManager.health = 6f;
+        GameManager.fireRate = 0.4f;
+        GameManager.bulletSize = 0.5f;
+        GameManager.moveSpeed = 4f;
 
         Time.timeScale = 1;
     }

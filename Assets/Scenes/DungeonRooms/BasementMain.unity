@@ -152,6 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00aa419962dad37429de4e789fff04c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bootCollected: 0
+  screwCollected: 0
   collectedNames: []
   healthText: {fileID: 1370265240}
 --- !u!4 &175983399
@@ -1739,6 +1741,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4865620847139352685, guid: 813b357175497914180c0543f8d5bf30, type: 3}
+      propertyPath: bulletSizeChange
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865620847139352685, guid: 813b357175497914180c0543f8d5bf30, type: 3}
+      propertyPath: attackSpeedChange
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 813b357175497914180c0543f8d5bf30, type: 3}
 --- !u!1001 &5216808171661085645
@@ -1798,12 +1808,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5216808170644640695, guid: 394c07b576f8fff4abe31a4cab8357e3, type: 3}
       propertyPath: bulletSpeed
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5216808170644640695, guid: 394c07b576f8fff4abe31a4cab8357e3, type: 3}
       propertyPath: collectedText
       value: 
       objectReference: {fileID: 2130703234}
+    - target: {fileID: 5216808170644640699, guid: 394c07b576f8fff4abe31a4cab8357e3, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5216808170644640702, guid: 394c07b576f8fff4abe31a4cab8357e3, type: 3}
       propertyPath: m_Name
       value: OnionBoy
@@ -1990,6 +2004,10 @@ PrefabInstance:
     - target: {fileID: 8325427556145809063, guid: 117a61dccbd9aeb4b863a9e292fc21b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8325427556145809064, guid: 117a61dccbd9aeb4b863a9e292fc21b3, type: 3}
+      propertyPath: moveSpeedChange
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 117a61dccbd9aeb4b863a9e292fc21b3, type: 3}

@@ -11,18 +11,18 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
-    private static float health = 6;
+    public static float health = 6;
 
-    private static int maxHealth = 6;
+    public static int maxHealth = 6;
 
-    private static float moveSpeed = 4f;
+    public static float moveSpeed = 4f;
 
-    private static float fireRate = 0.5f;
+    public static float fireRate = 0.4f;
 
-    private static float bulletSize = 0.5f;
+    public static float bulletSize = 0.5f;
 
-    private bool bootCollected = false;
-    private bool screwCollected = false;
+    public bool bootCollected = false;
+    public bool screwCollected = false;
 
     public List<string> collectedNames = new List<string> ();
 

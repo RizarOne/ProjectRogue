@@ -35,6 +35,7 @@ public class GameOverScreen : MonoBehaviour
         GameManager.fireRate = 0.4f;
         GameManager.bulletSize = 0.5f;
         GameManager.moveSpeed = 4f;
+        PlayerMovement.collectedAmount = 0;
         
         Time.timeScale = 1;
 
@@ -48,6 +49,7 @@ public class GameOverScreen : MonoBehaviour
         GameManager.fireRate = 0.4f;
         GameManager.bulletSize = 0.5f;
         GameManager.moveSpeed = 4f;
+        PlayerMovement.collectedAmount = 0;
 
         Time.timeScale = 1;
     }

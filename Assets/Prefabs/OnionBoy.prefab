@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5216808170644640699}
   - component: {fileID: 5216808170644640696}
   - component: {fileID: 5216808170644640695}
-  - component: {fileID: 5216808170644640689}
   - component: {fileID: 417384868962526391}
   m_Layer: 0
   m_Name: OnionBoy
@@ -120,7 +119,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.01254034, y: 0.008360386}
@@ -157,32 +156,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2566097471539640323, guid: bbc2e35b824c7fe4aa3a8db967c06b54, type: 3}
   bulletSpeed: 7.5
   fireDelay: 0.5
---- !u!61 &5216808170644640689
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5216808170644640702}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.004, y: 2.656}
-    newSize: {x: 4, y: 3}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4, y: 3}
-  m_EdgeRadius: 0
 --- !u!95 &417384868962526391
 Animator:
   serializedVersion: 5

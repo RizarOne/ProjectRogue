@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3e83b90947875f44927bd45a8429aec, type: 3}
-  m_Name: ChaseEnemy
+  m_Name: PotatoEnemy
   m_EditorClassIdentifier: 
-  itemToSpawn: {fileID: 2270061770683102495, guid: 0807a18a94638f240b4391e2a20373d8, type: 3}
+  itemToSpawn: {fileID: 799081183058154424, guid: 126773423fe98c44bb2571a37b0c431c, type: 3}
   minSpawn: 0
   maxSpawn: 3

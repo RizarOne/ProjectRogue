@@ -15,7 +15,7 @@ public class Door : MonoBehaviour
 
     private GameObject player;
 
-    private float widthOffset = 2.3f;
+    private float widthOffset = 19f;
 
     private void Start()
     {

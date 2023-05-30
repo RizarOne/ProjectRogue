@@ -1754,7 +1754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08070fb8a2565ae42b87ddf5ee340053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grid: {fileID: 1407660402}
+  grid: {fileID: 0}
   spawnerData:
   - name: ChaseEnemy
     spawnerData: {fileID: 11400000, guid: 8715bf3b28f31bd419834d4b0391ed29, type: 2}
@@ -1762,6 +1762,8 @@ MonoBehaviour:
     spawnerData: {fileID: 11400000, guid: dddb21d14052575439008ad325625cf3, type: 2}
   - name: RangedEnemy
     spawnerData: {fileID: 11400000, guid: 2e69e714f318a0c41af0446a40653c42, type: 2}
+  - name: PotatoEnemy
+    spawnerData: {fileID: 11400000, guid: e063c2aa9e27c0944ac480a39c930c1a, type: 2}
 --- !u!61 &1843255309
 BoxCollider2D:
   m_ObjectHideFlags: 0

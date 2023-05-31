@@ -323,7 +323,7 @@ Transform:
   m_Children:
   - {fileID: 1984804217}
   m_Father: {fileID: 675497592}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!61 &135110644
 BoxCollider2D:
@@ -781,7 +781,7 @@ Transform:
   m_Children:
   - {fileID: 314975600}
   m_Father: {fileID: 675497592}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!61 &537180590
 BoxCollider2D:
@@ -1063,7 +1063,6 @@ Transform:
   - {fileID: 513601197}
   - {fileID: 341801171}
   - {fileID: 1675841433}
-  - {fileID: 896707857}
   - {fileID: 781138893}
   - {fileID: 135110643}
   - {fileID: 537180589}
@@ -1355,7 +1354,7 @@ Transform:
   m_Children:
   - {fileID: 734215874}
   m_Father: {fileID: 675497592}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &781138894
 BoxCollider2D:
@@ -1519,58 +1518,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &896707856
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 896707857}
-  - component: {fileID: 896707858}
-  m_Layer: 0
-  m_Name: Grid
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &896707857
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896707856}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 675497592}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &896707858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896707856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b46a72d846e7d46a35987d3f1823ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  room: {fileID: 675497591}
-  grid:
-    columns: 0
-    rows: 0
-    verticalOffset: 2.5
-    horizontalOffset: 8
-  gridTile: {fileID: 6685378847100406548, guid: e86b58d79c6064549bc7bc1315842a24, type: 3}
-  availablePoints: []
 --- !u!1 &937313045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,7 +1753,7 @@ Transform:
   m_Children:
   - {fileID: 2120556372}
   m_Father: {fileID: 675497592}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1009275611
 BoxCollider2D:

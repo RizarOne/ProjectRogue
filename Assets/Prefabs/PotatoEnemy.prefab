@@ -122,14 +122,14 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 50
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &-5016375312960099161
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -143,9 +143,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.039063573, y: -0.00000011920929}
   serializedVersion: 2
-  m_Radius: 1.0266666
+  m_Radius: 0.80530775
 --- !u!114 &-7445419673143323606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,5 +165,7 @@ MonoBehaviour:
   attackRange: 1
   bulletSpeed: 0
   coolDown: 2
+  damage: 1
   notInRoom: 0
+  _health: 3
   bulletPrefab: {fileID: 2566097471539640323, guid: d08053c307420bd4c9cc83231d9ee665, type: 3}

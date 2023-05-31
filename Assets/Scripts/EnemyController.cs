@@ -33,6 +33,7 @@ public class EnemyController : MonoBehaviour
     public float attackRange;
     public float bulletSpeed;
     public float coolDown;
+    public float damage;
 
     private bool chooseDir = false;
     private bool dead = false;
@@ -40,14 +41,48 @@ public class EnemyController : MonoBehaviour
     public bool notInRoom = false;
     private Vector3 randomDir;
 
+    
+   Animator animator;
+
+    bool isAlive = true;
+
+
+    public float _health ;
+
     public GameObject bulletPrefab;
 
+    public float Health
+    {
+        set
+        {
+            _health = value;
+            if(value < 0)
+            {
+            }
 
+            if(_health <= 0)
+            {
+                RoomController.instance.StartCoroutine(RoomController.instance.RoomCouroutine());
+                //Destroy(gameObject);
+                animator.SetBool("isAlive", false);
+                speed = 0;
+
+            }
+        }
+        get
+        {
+            return _health;
+        }
+    }
 
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
+        animator.SetBool("isAlive", isAlive);
+        animator.SetBool("isMoving", false);
+
     }
 
     void Update()
@@ -129,6 +164,7 @@ public class EnemyController : MonoBehaviour
         if (gameObject != null)
         { 
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            animator.SetBool("isMoving",true);
         }
     }
 
@@ -164,9 +200,17 @@ public class EnemyController : MonoBehaviour
         coolDownAttack = false;
     }
 
-    public void Death()
+    public void OnHit()
     {
-        RoomController.instance.StartCoroutine(RoomController.instance.RoomCouroutine());
+        Health -= damage;                 
+        animator.SetTrigger("hit");
+
+    }
+
+    public void OnObjectDestroyed()
+
+        {
+
         Destroy(gameObject);
     }
 }

@@ -133,7 +133,9 @@ MonoBehaviour:
   attackRange: 5
   bulletSpeed: 4
   coolDown: 1
+  damage: 1
   notInRoom: 0
+  _health: 2
   bulletPrefab: {fileID: 2566097471539640323, guid: d08053c307420bd4c9cc83231d9ee665, type: 3}
 --- !u!50 &2225276184664028985
 Rigidbody2D:

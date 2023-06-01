@@ -62,10 +62,11 @@ public class EnemyController : MonoBehaviour
 
             if(_health <= 0)
             {
-                RoomController.instance.StartCoroutine(RoomController.instance.RoomCouroutine());
-                //Destroy(gameObject);
+               // RoomController.instance.StartCoroutine(RoomController.instance.RoomCouroutine()); tämä checkki ajetaan animaation lopussa funktiossa
+                //Destroy(gameObject); Animaatio ei mene loppuun jos on tässä
                 animator.SetBool("isAlive", false);
                 speed = 0;
+                
 
             }
         }
@@ -164,7 +165,7 @@ public class EnemyController : MonoBehaviour
         if (gameObject != null)
         { 
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-            animator.SetBool("isMoving",true);
+            animator.SetBool("isAttacking", false);
         }
     }
 
@@ -176,10 +177,20 @@ public class EnemyController : MonoBehaviour
             switch (enemyType)
             {
                 case (EnemyType.Melee):
+                    
+
                     GameManager.DamagePlayer(1);
-                    StartCoroutine(CoolDown());
+                    animator.SetBool("isAttacking", true);
+                    if (_health <= 0)
+                    {
+                        GameManager.DamagePlayer(-1);
+                    }
+
+                        StartCoroutine(CoolDown());
                     break;
+
                 case (EnemyType.Ranged):
+                    animator.SetBool("isAttacking", true);
                     GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity) as GameObject;
                     bullet.GetComponent<BulletController>().GetPlayer(player.transform);
                     bullet.AddComponent<Rigidbody2D>().gravityScale = 0;
@@ -210,7 +221,7 @@ public class EnemyController : MonoBehaviour
     public void OnObjectDestroyed()
 
         {
-
+        RoomController.instance.StartCoroutine(RoomController.instance.RoomCouroutine());
         Destroy(gameObject);
     }
 }

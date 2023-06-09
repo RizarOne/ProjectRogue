@@ -54,9 +54,14 @@ public class BulletController : MonoBehaviour
             col.gameObject.GetComponent<EnemyController>().OnHit();
             Destroy(gameObject);
         }
+        if(col.tag == "Boss" && !isEnemyBullet)
+        {
+            col.gameObject.GetComponent<BossEnemy>().BossHit();
+            Destroy(gameObject);
+        }
         if(col.tag == "Player" && isEnemyBullet)
         {
-            GameManager.DamagePlayer(1);
+            GameManager.DamagePlayer(1);                 /// Tämä tekee damagen, keksi uusi keino!
             Destroy(gameObject);
         }
     }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
@@ -53,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
             Shoot(shootHor, shootVert);
             lastFire = Time.time;
         }
+
+        
 
         collectedText.text = "Items Collected: " + collectedAmount;
 

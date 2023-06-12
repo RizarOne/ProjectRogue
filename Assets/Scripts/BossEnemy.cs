@@ -5,8 +5,6 @@ public enum BossState
 {
     Idle,
 
-    Wander,
-
     Follow,
 
     Die,
@@ -93,10 +91,7 @@ public class BossEnemy : MonoBehaviour
             //case (EnemyState.Idle):
             // Idle();
             // break;
-
-            case (EnemyState.Wander):
-                Wander();
-                break;
+       
 
             case (EnemyState.Follow):
                 Follow();
@@ -117,7 +112,7 @@ public class BossEnemy : MonoBehaviour
             }
             else if (!IsPlayerInRange(range) && currState != EnemyState.Die)
             {
-                currState = EnemyState.Wander;
+                currState = EnemyState.Idle;
             }
 
             if (Vector3.Distance(transform.position, player.transform.position) <= attackRange)
@@ -146,19 +141,19 @@ public class BossEnemy : MonoBehaviour
         chooseDir = false;
     }
 
-    void Wander()
-    {
-        if (!chooseDir)
-        {
-            StartCoroutine(ChooseDirection());
-        }
-
-        transform.position += transform.right * speed * Time.deltaTime;
-        if (IsPlayerInRange(range))
-        {
-            currState = EnemyState.Follow;
-        }
-    }
+    //void Wander()
+ //   {
+       // if (!chooseDir)
+       // {
+        //    StartCoroutine(ChooseDirection());
+       // }
+//
+       // transform.position += transform.right * speed * Time.deltaTime;
+       // if (IsPlayerInRange(range))
+       // {
+       //     currState = EnemyState.Follow;
+      //  }
+    //}
 
     void Follow()
     {

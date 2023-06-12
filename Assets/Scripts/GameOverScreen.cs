@@ -6,11 +6,17 @@ using UnityEngine.SceneManagement;
 public class GameOverScreen : MonoBehaviour
 {
     public GameObject gameOverMenu;
+    public AudioSource deathSound;
 
+
+    private void Start()
+    {
+        deathSound = GetComponent<AudioSource>();
+    }
     private void OnEnable()
     {
         GameManager.OnPlayerDeath += EnableGameOverMenu;
-
+        deathSound.Play();
     }
 
     private void OnDisable()
@@ -35,7 +41,7 @@ public class GameOverScreen : MonoBehaviour
         GameManager.fireRate = 0.4f;
         GameManager.bulletSize = 0.5f;
         GameManager.moveSpeed = 4f;
-        PlayerMovement.collectedAmount = 0;
+        PlayerMovement.killedAmount = 0;
         
         Time.timeScale = 1;
 
@@ -49,7 +55,7 @@ public class GameOverScreen : MonoBehaviour
         GameManager.fireRate = 0.4f;
         GameManager.bulletSize = 0.5f;
         GameManager.moveSpeed = 4f;
-        PlayerMovement.collectedAmount = 0;
+        PlayerMovement.killedAmount = 0;
 
         Time.timeScale = 1;
     }

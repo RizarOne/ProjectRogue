@@ -23,7 +23,7 @@ public class RestartLevel : MonoBehaviour
                 GameManager.fireRate = 0.4f;
                 GameManager.bulletSize = 0.5f;
                 GameManager.moveSpeed = 4f;
-                PlayerMovement.collectedAmount = 0;
+                PlayerMovement.killedAmount = 0;
 
                 Time.timeScale = 1;
             }

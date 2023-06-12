@@ -17,8 +17,8 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector]
     public Vector2 moveDir;
 
-    public Text collectedText;
-    public static int collectedAmount = 0;
+    public Text killedText;
+    public static int killedAmount = 0;
 
     public GameObject bulletPrefab;
     public float bulletSpeed;
@@ -26,15 +26,31 @@ public class PlayerMovement : MonoBehaviour
     public float fireDelay;
 
 
+    [Header("Dash Settings")]
+    [SerializeField] float dashSpeed = 10f;
+    [SerializeField] float dashDuration = 1f;
+    [SerializeField] float dashCooldown = 1f;
+    bool isDashing;
+    bool canDash;
+
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        canDash = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (isDashing)
+        {
+            return;
+        }
+
+
         InputManagment();
 
         moveDir.x = Input.GetAxisRaw("Horizontal");
@@ -55,10 +71,13 @@ public class PlayerMovement : MonoBehaviour
             lastFire = Time.time;
         }
 
-        
+                killedText.text = "Kills Collected: " + killedAmount;
 
-        collectedText.text = "Items Collected: " + collectedAmount;
 
+        if (Input.GetKeyDown(KeyCode.Space)&& canDash)
+        {
+            StartCoroutine(Dash());
+        }
 
     }
 
@@ -76,6 +95,11 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (isDashing)
+        {
+            return;
+        }
+
         Move();
     }
 
@@ -94,5 +118,19 @@ public class PlayerMovement : MonoBehaviour
         //rb.velocity = new Vector2(moveDir.x * moveSpeed, moveDir.y * moveSpeed);
         Vector2 direction = moveDir.normalized;
         rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        rb.velocity = new Vector2(moveDir.normalized.x * dashSpeed, moveDir.normalized.y * dashSpeed);
+        yield return new WaitForSeconds(dashDuration);
+        isDashing = false;
+
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
+        
+        
     }
 }

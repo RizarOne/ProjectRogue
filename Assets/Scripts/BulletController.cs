@@ -8,6 +8,8 @@ public class BulletController : MonoBehaviour
 
     public bool isEnemyBullet = false;
 
+    public bool isBossBullet = false;
+
     private Vector2 lastPos;
 
     private Vector2 curPos;
@@ -25,6 +27,16 @@ public class BulletController : MonoBehaviour
     void Update()
     {
         if (isEnemyBullet)
+        {
+            curPos = transform.position;
+            transform.position = Vector2.MoveTowards(transform.position, playerPos, 5f * Time.deltaTime);
+            if(curPos == lastPos)
+            {
+                Destroy(gameObject);
+            }
+            lastPos = curPos;
+        }
+        if (isBossBullet)
         {
             curPos = transform.position;
             transform.position = Vector2.MoveTowards(transform.position, playerPos, 5f * Time.deltaTime);
@@ -62,6 +74,11 @@ public class BulletController : MonoBehaviour
         if(col.tag == "Player" && isEnemyBullet)
         {
             GameManager.DamagePlayer(1);                 /// Tämä tekee damagen, keksi uusi keino!
+            Destroy(gameObject);
+        }
+        if(col.tag == "Player" && isBossBullet)
+        {
+            GameManager.DamagePlayer(2);                 /// Tämä tekee damagen, keksi uusi keino!
             Destroy(gameObject);
         }
     }

@@ -62,8 +62,9 @@ public class EnemyController : MonoBehaviour
 
             if(_health <= 0)
             {
-               // RoomController.instance.StartCoroutine(RoomController.instance.RoomCouroutine()); tämä checkki ajetaan animaation lopussa funktiossa
+                // RoomController.instance.StartCoroutine(RoomController.instance.RoomCouroutine()); tämä checkki ajetaan animaation lopussa funktiossa
                 //Destroy(gameObject); Animaatio ei mene loppuun jos on tässä
+
                 animator.SetBool("isAlive", false);
                 speed = 0;
                 
@@ -221,7 +222,10 @@ public class EnemyController : MonoBehaviour
     public void OnObjectDestroyed()
 
         {
+
         RoomController.instance.StartCoroutine(RoomController.instance.RoomCouroutine());
         Destroy(gameObject);
+        PlayerMovement.killedAmount++;
+
     }
 }

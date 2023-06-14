@@ -599,7 +599,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 7.3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -860,6 +860,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1316748262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5216808170644640702, guid: 394c07b576f8fff4abe31a4cab8357e3, type: 3}
+  m_PrefabInstance: {fileID: 5216808171661085645}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1316748269
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316748262}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.027817994, y: -0.027817965}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.004, y: 2.656}
+    newSize: {x: 4, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7536387, y: 2.071824}
+  m_EdgeRadius: 0
 --- !u!1001 &1347680996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2337,14 +2368,6 @@ PrefabInstance:
     - target: {fileID: 8821877237638382148, guid: a3ba56fa7a0498f438c1084e27a682be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8821877237638382151, guid: a3ba56fa7a0498f438c1084e27a682be, type: 3}
-      propertyPath: coolDown
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8821877237638382151, guid: a3ba56fa7a0498f438c1084e27a682be, type: 3}
-      propertyPath: bulletSpeed
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8821877237638382152, guid: a3ba56fa7a0498f438c1084e27a682be, type: 3}
       propertyPath: m_Name

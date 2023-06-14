@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5452314181774212849}
   - component: {fileID: -5016375312960099161}
   - component: {fileID: -7445419673143323606}
+  - component: {fileID: 3156886312194965994}
   m_Layer: 0
   m_Name: PotatoEnemy
   m_TagString: Enemy
@@ -143,9 +144,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.039063573, y: -0.00000011920929}
+  m_Offset: {x: -0.039063692, y: -0.00000011920929}
   serializedVersion: 2
-  m_Radius: 0.80530775
+  m_Radius: 0.36419034
 --- !u!114 &-7445419673143323606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,3 +170,19 @@ MonoBehaviour:
   notInRoom: 0
   _health: 3
   bulletPrefab: {fileID: 2566097471539640323, guid: d08053c307420bd4c9cc83231d9ee665, type: 3}
+--- !u!58 &3156886312194965994
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799081183058154424}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.038027465, y: -0.053238332}
+  serializedVersion: 2
+  m_Radius: 0.78873414

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4187192118664479107}
   - component: {fileID: 8753081153068672597}
   - component: {fileID: 27600129160188093}
+  - component: {fileID: 4075074714713147737}
   m_Layer: 0
   m_Name: JalopenoBoss
   m_TagString: Boss
@@ -129,7 +130,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &8753081153068672597
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143,7 +144,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.32875824, y: -0.0193367}
+  m_Offset: {x: -0.32875848, y: -0.8393843}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -154,7 +155,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.0974426, y: 7.4162674}
+  m_Size: {x: 1.1372695, y: 3.2160215}
   m_EdgeRadius: 0
 --- !u!114 &27600129160188093
 MonoBehaviour:
@@ -179,3 +180,29 @@ MonoBehaviour:
   notInRoom: 0
   _health: 20
   bulletPrefab: {fileID: 2566097471539640323, guid: 154cb7d109c323e4798023c06fd6a838, type: 3}
+--- !u!61 &4075074714713147737
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7439543348610212152}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.2600155, y: -0.020001054}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 12.8, y: 8.77}
+    newSize: {x: 12.8, y: 8.77}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.3994484, y: 7.5299273}
+  m_EdgeRadius: 0

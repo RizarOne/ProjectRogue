@@ -15,9 +15,12 @@ public class Door : MonoBehaviour
 
     private GameObject player;
 
-    private float widthOffset = 19f;
-    private float heightOffset = 10f;
-    private float rightOffset = 3f;
+
+    //Oven trigger teleport/pelaajan liikutus "säätö"
+    private float leftOffset = 19f;
+    private float topOffset = 11f;
+    private float bottomOffset = 9f;
+    private float rightOffset = 4f;
 
     private void Start()
     {
@@ -32,11 +35,11 @@ public class Door : MonoBehaviour
             switch (doorType)
             {
                 case DoorType.bottom:
-                    player.transform.position = new Vector2(transform.position.x, transform.position.y - heightOffset);
+                    player.transform.position = new Vector2(transform.position.x, transform.position.y - bottomOffset);
                         break;
 
                 case DoorType.left:
-                    player.transform.position = new Vector2(transform.position.x - widthOffset, transform.position.y);
+                    player.transform.position = new Vector2(transform.position.x - leftOffset, transform.position.y);
                         break;
 
                 case DoorType.right:
@@ -44,7 +47,7 @@ public class Door : MonoBehaviour
                     break;
 
                 case DoorType.top:
-                    player.transform.position = new Vector2(transform.position.x, transform.position.y + heightOffset);
+                    player.transform.position = new Vector2(transform.position.x, transform.position.y + topOffset);
                     break;
 
             }

@@ -187,7 +187,7 @@ public class RoomController : MonoBehaviour
 
     public IEnumerator RoomCouroutine()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1.2f);           /// Toimii myös osittain siihen jos vihollisen haluaa odottavan hetken ennenkuin hyökkää. 0.2default
         UpdateRooms();
     }
 

@@ -44,6 +44,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private AudioSource carrotDudeAttack;
     [SerializeField] private AudioSource potatoEnemyAttack;
     [SerializeField] private AudioSource rangedEnemyAttack;
+    [SerializeField] private AudioSource gotHit;
     
 
     
@@ -183,17 +184,20 @@ public class EnemyController : MonoBehaviour
             switch (enemyType)
             {
                 case (EnemyType.Melee):
-                    
+
+                    //carrotDudeAttack.Play(); Ei toimi tässä.
 
                     GameManager.DamagePlayer(1);
+                    
                     animator.SetBool("isAttacking", true);
-                    carrotDudeAttack.Play();
+                   
                     if (_health <= 0)
                     {
                         GameManager.DamagePlayer(-1);
                     }
 
                         StartCoroutine(CoolDown());
+                    
                     break;
 
                 case (EnemyType.Ranged):
@@ -222,6 +226,7 @@ public class EnemyController : MonoBehaviour
     {
         Health -= damage;                 
         animator.SetTrigger("hit");
+        gotHit.Play();
 
     }
 

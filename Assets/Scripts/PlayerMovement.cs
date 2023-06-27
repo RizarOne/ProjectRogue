@@ -34,9 +34,16 @@ public class PlayerMovement : MonoBehaviour
     bool canDash;
 
 
+    [SerializeField] private AudioSource attackSound;
+
+    [SerializeField] private AudioSource dashSound;
+    [SerializeField] private AudioSource moveSound;
 
     void Start()
     {
+        
+
+
         rb = GetComponent<Rigidbody2D>();
         canDash = true;
     }
@@ -44,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
         if (isDashing)
         {
@@ -59,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Vertical", moveDir.y);
         animator.SetFloat("Speed", moveDir.sqrMagnitude);
 
+  
         fireDelay = GameManager.FireRate;
 
         moveSpeed = GameManager.MoveSpeed;
@@ -77,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)&& canDash)
         {
             StartCoroutine(Dash());
+            dashSound.Play();
         }
 
     }
@@ -90,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
             (y < 0) ? Mathf.Floor(y) * bulletSpeed : Mathf.Ceil(y) * bulletSpeed,
             0
             );
-
+        attackSound.Play();
     }
 
     void FixedUpdate()
@@ -107,7 +117,6 @@ public class PlayerMovement : MonoBehaviour
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
-
         moveDir = new Vector2(moveX, moveY).normalized;
 
         
@@ -118,6 +127,7 @@ public class PlayerMovement : MonoBehaviour
         //rb.velocity = new Vector2(moveDir.x * moveSpeed, moveDir.y * moveSpeed);
         Vector2 direction = moveDir.normalized;
         rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+
     }
 
     private IEnumerator Dash()

@@ -41,6 +41,11 @@ public class EnemyController : MonoBehaviour
     public bool notInRoom = false;
     private Vector3 randomDir;
 
+    [SerializeField] private AudioSource carrotDudeAttack;
+    [SerializeField] private AudioSource potatoEnemyAttack;
+    [SerializeField] private AudioSource rangedEnemyAttack;
+    
+
     
    Animator animator;
 
@@ -182,6 +187,7 @@ public class EnemyController : MonoBehaviour
 
                     GameManager.DamagePlayer(1);
                     animator.SetBool("isAttacking", true);
+                    carrotDudeAttack.Play();
                     if (_health <= 0)
                     {
                         GameManager.DamagePlayer(-1);

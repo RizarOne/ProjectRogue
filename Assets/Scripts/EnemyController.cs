@@ -45,7 +45,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private AudioSource potatoEnemyAttack;
     [SerializeField] private AudioSource rangedEnemyAttack;
     [SerializeField] private AudioSource gotHit;
-    
+
+    public GameObject restartCoin;
 
     
    Animator animator;
@@ -73,7 +74,6 @@ public class EnemyController : MonoBehaviour
 
                 animator.SetBool("isAlive", false);
                 speed = 0;
-                
 
             }
         }
@@ -237,6 +237,8 @@ public class EnemyController : MonoBehaviour
         RoomController.instance.StartCoroutine(RoomController.instance.RoomCouroutine());
         Destroy(gameObject);
         PlayerMovement.killedAmount++;
+        Instantiate(restartCoin, transform.position, Quaternion.identity);
+
 
     }
 }

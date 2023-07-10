@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 1420383467837219868}
   - component: {fileID: 4187192118664479107}
   - component: {fileID: 8753081153068672597}
-  - component: {fileID: 27600129160188093}
   - component: {fileID: 4075074714713147737}
+  - component: {fileID: 2795542656019296191}
   m_Layer: 0
   m_Name: JalopenoBoss
-  m_TagString: Boss
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,29 +157,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1372695, y: 3.2160215}
   m_EdgeRadius: 0
---- !u!114 &27600129160188093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7439543348610212152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec444fbf3509864eaecf237a063b894, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currState: 0
-  enemyType: 1
-  range: 10
-  speed: 5
-  attackRange: 8
-  bulletSpeed: 8
-  coolDown: 0.5
-  damage: 1
-  notInRoom: 0
-  _health: 20
-  bulletPrefab: {fileID: 2566097471539640323, guid: 154cb7d109c323e4798023c06fd6a838, type: 3}
 --- !u!61 &4075074714713147737
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -206,3 +183,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.3994484, y: 7.5299273}
   m_EdgeRadius: 0
+--- !u!114 &2795542656019296191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7439543348610212152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a43b89f8c107bc7438e2006002f52bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currState: 0
+  enemyType: 1
+  range: 10
+  speed: 10
+  attackRange: 5
+  bulletSpeed: 15
+  coolDown: 0.2
+  damage: 2
+  notInRoom: 0
+  carrotDudeAttack: {fileID: 0}
+  potatoEnemyAttack: {fileID: 0}
+  rangedEnemyAttack: {fileID: 0}
+  gotHit: {fileID: 0}
+  restartCoin: {fileID: 2795550931185332763, guid: 03cd7eb0db6b16e4b99262f810313411, type: 3}
+  _health: 20
+  bulletPrefab: {fileID: 2566097471539640323, guid: 154cb7d109c323e4798023c06fd6a838, type: 3}

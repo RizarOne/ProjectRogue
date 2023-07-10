@@ -119,7 +119,7 @@ public class GameManager : MonoBehaviour
 
         if (bootCollected && screwCollected)
         {
-            FireRateChange(0.1f);
+            FireRateChange(0.05f);
 
         }
 

@@ -29,7 +29,8 @@ public class CollectionController : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().sprite = item.itemImage;
         Destroy(GetComponent<PolygonCollider2D>());
-        gameObject.AddComponent<PolygonCollider2D>();
+        var collider = gameObject.AddComponent<PolygonCollider2D>();
+        collider.isTrigger = true;
     }
 
     
@@ -42,7 +43,7 @@ public class CollectionController : MonoBehaviour
             GameManager.MoveSpeedChange(moveSpeedChange);
             GameManager.FireRateChange(attackSpeedChange);
             GameManager.BulletSizeChange(bulletSizeChange);
-            GameManager.instance.UpdateCollectedItems(this);
+            //GameManager.instance.UpdateCollectedItems(this);
             Destroy(gameObject);
         }
     }

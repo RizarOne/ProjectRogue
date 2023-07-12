@@ -163,8 +163,8 @@ MonoBehaviour:
   currState: 0
   enemyType: 0
   range: 15
-  speed: 2
-  attackRange: 2
+  speed: 4
+  attackRange: 1
   bulletSpeed: 0
   coolDown: 2
   damage: 1
@@ -173,6 +173,7 @@ MonoBehaviour:
   potatoEnemyAttack: {fileID: 0}
   rangedEnemyAttack: {fileID: 0}
   gotHit: {fileID: 2296088476060632734}
+  restartCoin: {fileID: 0}
   _health: 3
   bulletPrefab: {fileID: 2566097471539640323, guid: d08053c307420bd4c9cc83231d9ee665, type: 3}
 --- !u!58 &3156886312194965994

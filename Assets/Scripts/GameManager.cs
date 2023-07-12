@@ -17,12 +17,12 @@ public class GameManager : MonoBehaviour
 
     public static float moveSpeed = 4f;
 
-    public static float fireRate = 0.4f;
+    public static float fireRate = 0.6f;
 
     public static float bulletSize = 0.5f;
 
     public bool bootCollected = false;
-    public bool screwCollected = false;
+    public bool chiliCollected = false;
 
     public List<string> collectedNames = new List<string> ();
 
@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public static float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
 
     public static float FireRate { get => fireRate; set => fireRate = value; }
+
     public static float BulletSize { get => bulletSize; set => bulletSize = value; }
 
     public Text healthText;
@@ -97,34 +98,34 @@ public class GameManager : MonoBehaviour
         bulletSize += size;
     }
 
-    public void UpdateCollectedItems(CollectionController item)
-    {
-        collectedNames.Add(item.item.name);
+    //public void UpdateCollectedItems(CollectionController item)
+    //{
+    //    collectedNames.Add(item.item.name);
 
-        foreach (string i in collectedNames)
-        {
-            switch (i)
-            {
-                case "Boot":
-                    bootCollected = true;
-                    break;
+    //    foreach (string i in collectedNames)
+    //    {
+    //        switch (i)
+    //        {
+    //            case "Boot":
+    //                bootCollected = true;
+    //                break;
 
-                case "Screw":
-                    screwCollected = true;
-                    break;
+    //            case "Chili":
+    //                chiliCollected = true;
+    //                break;
 
-            }
-        }
+    //        }
+    //    }
 
 
-        if (bootCollected && screwCollected)
-        {
-            FireRateChange(0.05f);
+    //    if (bootCollected && chiliCollected)
+    //    {
+    //        BulletSizeChange(1f);
 
-        }
+    //    }
 
         
 
-    }
+    
 
 }

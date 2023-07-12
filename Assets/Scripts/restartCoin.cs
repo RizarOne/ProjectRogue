@@ -21,7 +21,7 @@ public class restartCoin : MonoBehaviour
         SceneManager.LoadScene("BasementMain");
         DungeonCrawlerController.positionsVisited.Clear();
         GameManager.health = 6f;
-        GameManager.fireRate = 0.4f;
+        GameManager.fireRate = 0.6f;
         GameManager.bulletSize = 0.5f;
         GameManager.moveSpeed = 4f;
         PlayerMovement.killedAmount = 0;

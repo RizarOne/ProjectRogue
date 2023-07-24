@@ -547,8 +547,6 @@ MonoBehaviour:
     spawnerData: {fileID: 11400000, guid: dddb21d14052575439008ad325625cf3, type: 2}
   - name: RangedEnemy
     spawnerData: {fileID: 11400000, guid: 2e69e714f318a0c41af0446a40653c42, type: 2}
-  - name: PotatoEnemy
-    spawnerData: {fileID: 11400000, guid: e063c2aa9e27c0944ac480a39c930c1a, type: 2}
 --- !u!61 &250638403
 BoxCollider2D:
   m_ObjectHideFlags: 0

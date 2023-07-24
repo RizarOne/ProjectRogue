@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8753081153068672597}
   - component: {fileID: 4075074714713147737}
   - component: {fileID: 2795542656019296191}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: JalopenoBoss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -208,6 +208,6 @@ MonoBehaviour:
   potatoEnemyAttack: {fileID: 0}
   rangedEnemyAttack: {fileID: 0}
   gotHit: {fileID: 0}
-  restartCoin: {fileID: 2795550931185332763, guid: 03cd7eb0db6b16e4b99262f810313411, type: 3}
+  restartCoin: {fileID: 1842892480136739750, guid: 03cd7eb0db6b16e4b99262f810313411, type: 3}
   _health: 20
   bulletPrefab: {fileID: 2566097471539640323, guid: 154cb7d109c323e4798023c06fd6a838, type: 3}

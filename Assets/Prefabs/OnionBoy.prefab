@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 1316748277}
   - component: {fileID: 1316748284}
   - component: {fileID: 1316748285}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: OnionBoy
   m_TagString: Player
   m_Icon: {fileID: 0}

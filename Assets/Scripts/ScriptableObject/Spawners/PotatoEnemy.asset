@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PotatoEnemy
   m_EditorClassIdentifier: 
   itemToSpawn: {fileID: 799081183058154424, guid: 126773423fe98c44bb2571a37b0c431c, type: 3}
-  minSpawn: 0
+  minSpawn: 1
   maxSpawn: 3

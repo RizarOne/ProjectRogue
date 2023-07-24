@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -7445419673143323606}
   - component: {fileID: 3156886312194965994}
   - component: {fileID: 2296088476060632734}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PotatoEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ MonoBehaviour:
   speed: 4
   attackRange: 1
   bulletSpeed: 0
-  coolDown: 2
+  coolDown: 1
   damage: 1
   notInRoom: 0
   carrotDudeAttack: {fileID: 0}

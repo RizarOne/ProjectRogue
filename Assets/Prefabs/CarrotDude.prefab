@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 296321174}
   - component: {fileID: 426121077}
   - component: {fileID: -6830684142066666776}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CarrotDude
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -183,6 +183,7 @@ MonoBehaviour:
   potatoEnemyAttack: {fileID: 0}
   rangedEnemyAttack: {fileID: 0}
   gotHit: {fileID: -6830684142066666776}
+  restartCoin: {fileID: 0}
   _health: 4
   bulletPrefab: {fileID: 2566097471539640323, guid: d08053c307420bd4c9cc83231d9ee665, type: 3}
 --- !u!61 &426121077

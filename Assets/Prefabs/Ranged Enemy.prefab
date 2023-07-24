@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1291667057}
   - component: {fileID: 1265328998}
   - component: {fileID: 6406422579577323188}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ranged Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -141,6 +141,7 @@ MonoBehaviour:
   potatoEnemyAttack: {fileID: 0}
   rangedEnemyAttack: {fileID: 0}
   gotHit: {fileID: 6406422579577323188}
+  restartCoin: {fileID: 0}
   _health: 2
   bulletPrefab: {fileID: 2566097471539640323, guid: d08053c307420bd4c9cc83231d9ee665, type: 3}
 --- !u!50 &2225276184664028985

@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static event Action OnPlayerDeath;
 
+
     public static GameManager instance;
 
     public static float health = 6;

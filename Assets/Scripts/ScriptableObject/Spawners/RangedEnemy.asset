@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RangedEnemy
   m_EditorClassIdentifier: 
   itemToSpawn: {fileID: 8821877237638382152, guid: a3ba56fa7a0498f438c1084e27a682be, type: 3}
-  minSpawn: 0
-  maxSpawn: 2
+  minSpawn: 1
+  maxSpawn: 3

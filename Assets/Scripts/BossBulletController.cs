@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletController : MonoBehaviour
+public class BossBulletController : MonoBehaviour
 {
     public float lifeTime;
 
@@ -13,6 +13,9 @@ public class BulletController : MonoBehaviour
     private Vector2 curPos;
 
     private Vector2 playerPos;
+
+
+
     void Start()
     {
         StartCoroutine(DeathDelay());
@@ -29,16 +32,21 @@ public class BulletController : MonoBehaviour
             curPos = transform.position;
             transform.position = Vector2.MoveTowards(transform.position, playerPos, 5f * Time.deltaTime);
 
+            //transform.Translate(playerPos * 1f * Time.deltaTime); Ei toiminut, olisi saanut bulletit menem‰‰n lastposia pidemm‰lle.
+
 
             if (curPos == lastPos)
             {
                 Destroy(gameObject);
             }
+
+
+
             lastPos = curPos;
         }
-        
+
     }
-    
+
     public void GetPlayer(Transform player)
     {
         playerPos = player.position;
@@ -52,22 +60,22 @@ public class BulletController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.tag == "Wall")
+        if (col.tag == "Wall")
         {
             Destroy(gameObject);
         }
 
-        if(col.tag == "Enemy" && !isEnemyBullet)
+        if (col.tag == "Enemy" && !isEnemyBullet)
         {
             col.gameObject.GetComponent<EnemyController>().OnHit();
             Destroy(gameObject);
         }
-        
-        if(col.tag == "Player" && isEnemyBullet)
+
+        if (col.tag == "Player" && isEnemyBullet)
         {
             GameManager.DamagePlayer(1);                 /// T‰m‰ tekee damagen, keksi uusi keino!
             Destroy(gameObject);
         }
-        
+
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Boss
   - Wall
   - Coin
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX

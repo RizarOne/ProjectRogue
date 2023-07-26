@@ -18,7 +18,9 @@ public enum EnemyType
 {
     Melee,
 
-    Ranged
+    Ranged,
+
+    Boss
 };
 
 public class EnemyController : MonoBehaviour
@@ -44,6 +46,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private AudioSource carrotDudeAttack;
     [SerializeField] private AudioSource potatoEnemyAttack;
     [SerializeField] private AudioSource rangedEnemyAttack;
+    [SerializeField] private AudioSource bossEnemyAttack;
     [SerializeField] private AudioSource gotHit;
 
     public GameObject restartCoin;
@@ -207,6 +210,17 @@ public class EnemyController : MonoBehaviour
                     bullet.AddComponent<Rigidbody2D>().gravityScale = 0;
                     bullet.GetComponent<BulletController>().isEnemyBullet = true;
                     StartCoroutine(CoolDown());
+
+                    break;
+                
+                case (EnemyType.Boss):
+                    animator.SetBool("isAttacking", true);
+                    GameObject bossBullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity) as GameObject;
+                    bossBullet.GetComponent<BossBulletController>().GetPlayer(player.transform);
+                    bossBullet.AddComponent<Rigidbody2D>().gravityScale = 0;
+                    bossBullet.GetComponent<BossBulletController>().isEnemyBullet = true;
+                    StartCoroutine(CoolDown());
+
                     break;
 
 

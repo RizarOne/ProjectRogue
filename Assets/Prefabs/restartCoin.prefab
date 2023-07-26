@@ -137,4 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameCompleteMenu: {fileID: 5621649973789763157, guid: c9ac1676367849c4db127fd9a8548f6d, type: 3}
-  deathSound: {fileID: 0}
+  player: {fileID: 5216808170644640702, guid: 394c07b576f8fff4abe31a4cab8357e3, type: 3}

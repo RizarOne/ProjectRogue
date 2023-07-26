@@ -6,28 +6,22 @@ using UnityEngine.SceneManagement;
 public class restartCoin : MonoBehaviour
 {
     public GameObject gameCompleteMenu;
-    public AudioSource deathSound;
+    public GameObject player;
 
-
-    private void Start()
-    {
-        //deathSound = GetComponent<AudioSource>();
-    }
-    
-
-    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
-
+        if (collision.gameObject.tag == "Player")
+        {     
             Instantiate(gameCompleteMenu);
             gameCompleteMenu.SetActive(true);
-
+            Destroy(gameObject);
+            GameManager.moveSpeed = 0f;
+        }
 
     }
 
-    
+
 
     public void RestartLevel()
     {

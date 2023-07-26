@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 407605573335809909}
   - component: {fileID: 4079672374829378200}
-  - component: {fileID: 2889134983841663828}
   - component: {fileID: 194890180}
+  - component: {fileID: -4827262588192435365}
   m_Layer: 0
   m_Name: jalopenoBullet
   m_TagString: Untagged
@@ -86,21 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2889134983841663828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2566097471539640323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e6051ea1cb76594b8e8191be154d1f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeTime: 2
-  isEnemyBullet: 1
-  isBossBullet: 0
 --- !u!61 &194890180
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -127,3 +112,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &-4827262588192435365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2566097471539640323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be0b367ba045d54cacdc19ab2f2421a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 10
+  isEnemyBullet: 1
+  player: {fileID: 5216808170644640702, guid: 394c07b576f8fff4abe31a4cab8357e3, type: 3}

@@ -248,9 +248,9 @@ public class EnemyController : MonoBehaviour
 
         {
 
+        PlayerMovement.killedAmount++;
         RoomController.instance.StartCoroutine(RoomController.instance.RoomCouroutine());
         Destroy(gameObject);
-        PlayerMovement.killedAmount++;
         Instantiate(restartCoin, transform.position, Quaternion.identity);
 
 
